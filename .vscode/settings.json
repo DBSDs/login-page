@@ -1,0 +1,5 @@
+{
+  "nuxt.isNuxtApp": false,
+  // 关闭对 v-model 的检查 
+  "vetur.validation.template": false,
+}

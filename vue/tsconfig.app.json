@@ -1,0 +1,25 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "exclude": ["src/**/__tests__/*"],
+  "compilerOptions": {
+    "jsx": "preserve",
+    "target": "esnext",
+    "module": "esnext",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "lib": ["esnext", "dom"],
+    "types": ["vite/client", "node"],
+    "strict": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "plugins": [{
+      "name": "@vuedx/typescript-plugin-vue"
+    }],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
