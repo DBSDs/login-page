@@ -30,10 +30,9 @@ class UserModel {
   @Init()
   async saveMock() {
     const user = new UserEntity();
-    user.username = 'jack';
-    user.password = 'redballoon';
+    user.username = 'clj';
+    user.password = '123';
     await this.userRepo.save(user);
-    console.log('has benn saved');
   }
 }
 

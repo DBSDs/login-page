@@ -4,6 +4,7 @@ import * as validate from '@midwayjs/validate';
 import * as info from '@midwayjs/info';
 import * as orm from '@midwayjs/orm';
 import * as jwt from '@midwayjs/jwt';
+import * as swagger from '@midwayjs/swagger';
 const cors = require('@koa/cors');
 import { join } from 'path';
 import 'tsconfig-paths/register';
@@ -18,6 +19,10 @@ import { JwtMiddleware } from './middleware/jwt.middleware';
     koa,
     validate,
     jwt,
+    {
+      component: swagger,
+      enabledEnvironment: ['local'],
+    },
     {
       component: info,
       enabledEnvironment: ['local'],
